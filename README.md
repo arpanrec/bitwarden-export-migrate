@@ -61,4 +61,4 @@ Make a cloud ready option for bitwarden zero touch backup
 
 ## License
 
-[APACHE LICENSE, VERSION 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+MIT
