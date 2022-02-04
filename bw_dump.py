@@ -3,7 +3,7 @@ import json
 import os.path
 import subprocess
 import time
-import configargparse
+import argparse
 from write_to_file import WriteToFile, EncryptAndWriteToFile
 
 COMMON_CLI_PARAMS: list = ['--raw']
@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
     bw_current_status = json.loads(bw_exec(["bw", "status"]))
 
-    parser = configargparse.ArgParser()
+    parser = argparse.ArgumentParser()
     parser.add_argument("-d", '--directory', help="Bitwarden Dump Location", default=f'dump_{int(time.time())}')
     parser.add_argument("-g", '--gpg-fpr', help="gpg-key-id for file encryption")
     args, unknown = parser.parse_known_args()
