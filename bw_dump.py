@@ -30,7 +30,7 @@ if __name__ == '__main__':
     bw_current_status = json.loads(bw_exec(["bw", "status"]))
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-d", '--directory', help="Bitwarden Dump Location", default=f'dump_{int(time.time())}')
+    parser.add_argument("-d", '--directory', help="Bitwarden Dump Location", default=f'bitwarden_dump_{int(time.time())}')
     parser.add_argument("-g", '--gpg-fpr', help="gpg-key-id for file encryption")
     args, unknown = parser.parse_known_args()
 
